@@ -92,4 +92,8 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle_version")
 
     implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
+
+    //Glide
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+    ksp ("com.github.bumptech.glide:compiler:4.16.0")
 }
