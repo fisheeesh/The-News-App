@@ -6,6 +6,12 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
+/**
+ * The logging interceptor is configured to log the body of HTTP requests and responses,
+ * which can be very useful for debugging network issues.
+ * This might be easier to implement in smaller projects or where logging is essential.
+ * If you need to log network traffic for debugging, this class is better suited for that purpose.
+ */
 class RetrofitInstance {
     companion object{
         private val retrofit : Retrofit by lazy {
