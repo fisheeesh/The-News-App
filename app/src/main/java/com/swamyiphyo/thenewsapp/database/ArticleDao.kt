@@ -19,7 +19,7 @@ interface ArticleDao {
      * A conflict like if same primary key already exits in the table,
      * the old data will be replaced with the new data.
      * This is a safe way of writing code so that we dun face any errors in the future.
-     * Suspend functions should be called only from coroutines.
+     * Suspend functions should be called only from coroutines or other suspend functions.
      * Suspend wil make sure that the database operations will be performed on a background thread.
      * Long means the primary key of the article.
      */
