@@ -14,8 +14,8 @@ import com.swamyiphyo.thenewsapp.viewmodel.NewsViewModel
 class ArticleFragment : Fragment(R.layout.fragment_article) {
 
     //All API responses and everything is connected in viewmodel
-    lateinit var newsViewModel : NewsViewModel
-    val args : ArticleFragmentArgs by navArgs()
+    private lateinit var newsViewModel : NewsViewModel
+    private val args : ArticleFragmentArgs by navArgs()
     private lateinit var binding : FragmentArticleBinding
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
