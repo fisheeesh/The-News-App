@@ -35,6 +35,14 @@ class FavoriteFragment : Fragment() {
         }
     }
 
+    private fun setUpFavoriteRecycler(){
+        newsAdapter = NewsAdapter()
+        binding.favRV.apply{
+            adapter = newsAdapter
+            layoutManager = LinearLayoutManager(activity)
+        }
+    }
+
     private fun navigateToArticle(){
         newsAdapter.setOnItemClickListener {
             val bundle = Bundle().apply {
@@ -70,14 +78,6 @@ class FavoriteFragment : Fragment() {
 
         ItemTouchHelper(itemTouchHelperCallback).apply {
             attachToRecyclerView(binding.favRV)
-        }
-    }
-
-    private fun setUpFavoriteRecycler(){
-        newsAdapter = NewsAdapter()
-        binding.favRV.apply{
-            adapter = newsAdapter
-            layoutManager = LinearLayoutManager(activity)
         }
     }
 }

@@ -6,7 +6,6 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.AbsListView
 import android.widget.Button
 import android.widget.TextView
@@ -19,7 +18,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.swamyiphyo.thenewsapp.R
 import com.swamyiphyo.thenewsapp.adapters.NewsAdapter
 import com.swamyiphyo.thenewsapp.databinding.FragmentHeadLinesBinding
-import com.swamyiphyo.thenewsapp.databinding.FragmentSearchBinding
 import com.swamyiphyo.thenewsapp.ui.NewsActivity
 import com.swamyiphyo.thenewsapp.util.Constants
 import com.swamyiphyo.thenewsapp.util.Resource
@@ -118,7 +116,7 @@ class HeadLinesFragment : Fragment(R.layout.fragment_head_lines) {
         isError = true
     }
 
-    val scrollListener = object : RecyclerView.OnScrollListener(){
+    private val scrollListener = object : RecyclerView.OnScrollListener(){
         override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
             super.onScrolled(recyclerView, dx, dy)
 
