@@ -14,7 +14,7 @@ import com.swamyiphyo.thenewsapp.databinding.FragmentFavoriteBinding
 import com.swamyiphyo.thenewsapp.ui.NewsActivity
 import com.swamyiphyo.thenewsapp.viewmodel.NewsViewModel
 
-class FavoriteFragment : Fragment() {
+class FavoriteFragment : Fragment(R.layout.fragment_favorite) {
     private lateinit var newsAdapter: NewsAdapter
     private lateinit var newsViewModel: NewsViewModel
     private lateinit var binding : FragmentFavoriteBinding
