@@ -1,5 +1,6 @@
 package com.swamyiphyo.thenewsapp.database
 
+import androidx.room.TypeConverter
 import androidx.room.TypeConverters
 import com.swamyiphyo.thenewsapp.models.Source
 
@@ -11,12 +12,12 @@ class Converters {
     /**
      * This function will be used when storing a source obj in the database
      */
-    @TypeConverters
+    @TypeConverter
     fun fromSource(source : Source) : String = source.name
 
     /**
      * This function will be used when retrieving a source obj from the database
      */
-    @TypeConverters
+    @TypeConverter
     fun toSource(name : String) : Source = Source(name, name)
 }
